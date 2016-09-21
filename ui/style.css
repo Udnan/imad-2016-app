@@ -1,22 +1,38 @@
 body {
     font-family: sans-serif;
-    background-color: lightgrey;
-    margin-top: 75px;
+    background-color:#121212;
+    margin-top: 50px;
+    background-image: url(wall.jpg);
 }
 
-.center {
-    text-align: center;
+h3 { color:white; font-size:40px; font-family:courier; padding-bottom: 10px; text-shadow:4px 2px blue; }
+
+
+.img-me{
+	width: 250px;
+	height:250px;
+	border-radius:50%;
 }
 
-.text-big {
-    font-size: 300%;
+.div-learned{
+	padding-left: 30px
+	
+}
+	
+.img-learned{
+	border-radius:50%;
+	width:150px;
+	height: 150px;
+	padding:50px;
+
+
 }
 
-.bold {
-    font-weight: bold;
-}
 
-.img-medium {
-    height: 200px;
-}
+.myimage{
+	
+	/*border:1px solid LightGrey;*/
+	height:200px;
 
+
+}
