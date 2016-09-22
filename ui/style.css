@@ -20,11 +20,17 @@ h3 { color:white; font-size:40px; font-family:courier; padding-bottom: 10px; tex
 }
 	
 .img-learned{
+    opacity:0.76;
+    transition:opacity;
 	border-radius:50%;
 	width:150px;
 	height: 150px;
 	padding:50px;
 
+}
+
+.img-learned:hover{
+    opacity:1;
 }
 
 
