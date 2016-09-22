@@ -47,7 +47,9 @@ h3 { color:white; font-size:40px; font-family:courier; padding-bottom: 10px; tex
     left:40%;
     background-color:#337ab7;
     color:LightGrey;
-    font-size:40;
+    font-size:30px;
+    text-decoration:bold;
+    border-radius:50%;
     
     
 }
