@@ -27,7 +27,8 @@ btnSubmit.onclick=function(){
                 var list='';
                 for(var i=0;i<comments.length;i++){
                     
-                    list='<h5 style:"color:white;">'+comments[i]+'</h5>';
+                    list='<h5>'+comments[i]+'</h5>';
+                    console.log(i);
                     
                 }
                 var divComments=document.getElementById("divComments");
