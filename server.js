@@ -56,7 +56,7 @@ app.get('/comments/:comment'),function(req,res){
     console.log(comment);
     comments.push(comment);
     res.send(JSON.stringify(comments));
-});
+}) ;
 
 //var counter=0;
 //app.get('/comments',function(req,res){
