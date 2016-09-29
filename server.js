@@ -57,6 +57,13 @@ app.get('/comments',function(req,res){
     res.send(counter.toString());
 });
 
+var comments=[];
+app.get('/comments/:comment'),function(req,res){
+    var comment=req.params.comment;
+    comments.push(comment);
+    res.send(JSON.stringify(comments));
+}
+
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
   console.log(`IMAD course app listening on port ${port}!`);
