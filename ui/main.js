@@ -23,19 +23,21 @@ btnSubmit.onclick=function(){
         if(request.readyState === XMLHttpRequest.DONE){
         
             if (request.status===200){
-                counter=request.responseText;
-                console.log(counter);
+                var comments=['comment1'];
+                var list='';
+                for(var i=0;i<comments.length;i++){
+                    
+                    list='<h5 style:"color:white;">'+comments[i]+'</h5>';
+                    
+                }
+                var divComments=document.getElementById("divComments");
+                divComments.innerHTML=list;
+                
             }
         }
     }
     //make request 
-    var comments=['comment1'];
-    var list='';
-    for(var i=0;i<comments.length;i++){
-        list='<h5>'+comments[i]+'</h5>';
-    }
-    var divComments=document.getElementById("divComments");
-    divComments.innerHTML=list;
-    request.open('GET',"http://udnan.imad.hasura-app.io/comments",true);
+    
+    request.open('GET',"http://udnan.imad.hasura-app.io/comments/"+comment_box.value,true);
     request.send(null);
 }
