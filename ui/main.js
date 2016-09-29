@@ -16,6 +16,7 @@ comment_button.onclick=function(){
 var btnSubmit=document.getElementById("btnSubmit");
 btnSubmit.onclick=funtion(){
     //get the comments
+    console.log("clicked submit button");
     var request= new XMLHttpRequest();
     request.onReadyState=function(){
         if(request.readyState===XMLHttpRequest.DONE){
