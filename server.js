@@ -10,7 +10,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/ui/main.js', function (req, res) {
-  console.log("loaded JS file")
+  console.log("loaded JS file");
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 
@@ -51,12 +51,12 @@ app.get('/ui/wall.jpg', function (req, res) {
 });
 
 var comments=[];
-app.get('/comments/:comment'),function(req,res){
+app.get('/comments/:comment',function(req,res){
     var comment=req.params.comment;
     console.log(comment);
     comments.push(comment);
     res.send(JSON.stringify(comments));
-}) ;
+});
 
 //var counter=0;
 //app.get('/comments',function(req,res){
