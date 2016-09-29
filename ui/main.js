@@ -19,11 +19,12 @@ btnSubmit.onclick=function(){
     console.log("clicked submit button");
     var request= new XMLHttpRequest();
     request.onreadystatechange=function(){
-        
+        console.log("ividethy")
         if(request.readyState === XMLHttpRequest.DONE){
-            
+            console.log("yeah1!");
             if (request.status===200){
-                counter=request.responseText;
+                console.log("yeah!");
+                counter=request.status;
                 console.log(counter);
             }
         }
