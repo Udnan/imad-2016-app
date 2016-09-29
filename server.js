@@ -48,7 +48,7 @@ app.get('/ui/wall.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'wall.jpg'));
 });
 
-app.get('ui/comments',function(req,res){
+app.get('/comments',function(req,res){
     console.log("Accessed comments");
 });
 
