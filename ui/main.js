@@ -21,7 +21,7 @@ btnSubmit.onclick=function(){
     request.onReadyState=function(){
         if(request.readyState===XMLHttpRequest.DONE){
             if (request.status===200){
-                counter=request.responseText;
+                counter=request.status;
                 console.log(counter);
             }
         }
