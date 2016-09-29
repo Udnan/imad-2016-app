@@ -26,5 +26,5 @@ btnSubmit.onclick=funtion(){
         }
     }
     //make request 
-    request.open('GET',"http://udnan.imad.hasura-app.io/comments")
+    request.open('GET',"http://udnan.imad.hasura-app.io/comments");
 }
