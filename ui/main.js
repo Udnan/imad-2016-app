@@ -22,7 +22,7 @@ btnSubmit.onclick=funtion(){
         if(request.readyState===XMLHttpRequest.DONE){
             if (request.status===200){
                 var counter=request.responseText;
-                console.log(counter)
+                console.log(counter);
             }
         }
     }
