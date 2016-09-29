@@ -55,7 +55,7 @@ app.get('/comments/:comment'),function(req,res){
     var comment=req.params.comment;
     console.log(comment);
     comments.push(comment);
-    res.send(JSON.stringify(comments));
+    res.send(JSON.stringify(123));
 }
 
 //var counter=0;
