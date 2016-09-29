@@ -2,7 +2,7 @@ body {
     font-family: sans-serif;
     background-color:#121212;
     margin-top: 50px;
-    background-image: url(wall.jpg);
+    /*background-image: url(wall.jpg);*/
 }
 
 h3 { color:white; font-size:40px; font-family:courier; padding-bottom: 10px; text-shadow:4px 2px blue; }
