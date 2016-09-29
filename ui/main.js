@@ -12,7 +12,7 @@ comment_button.onclick=function(){
     }
     
 }
-
+var counter;
 var btnSubmit=document.getElementById("btnSubmit");
 btnSubmit.onclick=function(){
     //get the comments
@@ -21,7 +21,7 @@ btnSubmit.onclick=function(){
     request.onReadyState=function(){
         if(request.readyState===XMLHttpRequest.DONE){
             if (request.status===200){
-                var counter=request.responseText;
+                counter=request.responseText;
                 console.log(counter);
             }
         }
