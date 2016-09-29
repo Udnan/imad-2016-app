@@ -18,8 +18,9 @@ btnSubmit.onclick=function(){
     //get the comments
     console.log("clicked submit button");
     var request= new XMLHttpRequest();
-    request.onReadyState=function(){
-        if(request.readyState===XMLHttpRequest.DONE){
+    request.onReadyStateChange=function(){
+        console.log("ividethy")
+        if(request.readyState === XMLHttpRequest.DONE){
             console.log("yeah1!");
             if (request.status===200){
                 console.log("yeah!");
