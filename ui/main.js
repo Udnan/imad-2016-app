@@ -20,6 +20,7 @@ btnSubmit.onclick=function(){
     var request= new XMLHttpRequest();
     request.onReadyState=function(){
         if(request.readyState===XMLHttpRequest.DONE){
+            console.log("yeah1!");
             if (request.status===200){
                 console.log("yeah!");
                 counter=request.status;
