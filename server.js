@@ -48,8 +48,11 @@ app.get('/ui/wall.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'wall.jpg'));
 });
 
+var counter=0;
 app.get('/comments',function(req,res){
     console.log("Accessed comments");
+    counter=counter+1;
+    res.send(counter.toString());
 });
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
