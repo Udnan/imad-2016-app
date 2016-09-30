@@ -27,7 +27,7 @@ btnSubmit.onclick=function(){
                 var list='';
                 for(var i=0;i<comments.length;i++){
                     
-                    list='<div>'+comments[i]+'</div>'+list;
+                    list='<div class="divComment">'+comments[i]+'</div>'+list;
                     console.log(i);
                     
                 }
