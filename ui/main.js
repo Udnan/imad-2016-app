@@ -27,7 +27,7 @@ btnSubmit.onclick=function(){
                 var list='';
                 for(var i=0;i<comments.length;i++){
                     
-                    list='<li>'+comments[i]+'</li>'+list;
+                    list='<div>'+comments[i]+'</div>'+list;
                     console.log(i);
                     
                 }
