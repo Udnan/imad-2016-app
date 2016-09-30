@@ -75,3 +75,6 @@ h3 { color:white; font-size:40px; font-family:courier; padding-bottom: 10px; tex
     color:#000000;
     opacity:0.5;
 }
+.divComment{
+    padding:20px;
+}
