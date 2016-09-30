@@ -70,3 +70,8 @@ h3 { color:white; font-size:40px; font-family:courier; padding-bottom: 10px; tex
     opacity:1;
     
 }
+#divComments{
+    background-color:#FFFFFF;
+    color:#000000;
+    opacity:0.5;
+}
