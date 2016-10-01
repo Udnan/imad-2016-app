@@ -50,6 +50,10 @@ app.get('/ui/wall.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'wall.jpg'));
 });
 
+app.get('/ballExplosion', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'ball_index.html'));
+});
+
 var comments=[];
 app.get('/comments/:comment',function(req,res){
     var comment=req.params.comment;
