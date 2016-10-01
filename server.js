@@ -54,6 +54,14 @@ app.get('/ballExplosion', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'ball_index.html'));
 });
 
+app.get('/ui/ball_style.css', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'ball_style.css'));
+});
+
+app.get('/ui/ball_main.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'ball_main.js'));
+});
+
 var comments=[];
 app.get('/comments/:comment',function(req,res){
     var comment=req.params.comment;
