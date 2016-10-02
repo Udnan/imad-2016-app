@@ -71,11 +71,6 @@ h3 { color:white; font-size:40px; font-family:courier; padding-bottom: 10px; tex
     
 }
 #divComments{
-    background-color:#FFFFFF;
-    color:#000000;
-    opacity:0.5;
-}
-.divComments{
     padding:20px;
     margin-top:20px;
     margin-bottom:20px;
