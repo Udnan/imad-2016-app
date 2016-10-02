@@ -70,7 +70,7 @@ h3 { color:white; font-size:40px; font-family:courier; padding-bottom: 10px; tex
     opacity:1;
     
 }
-#divComments{
+.divComments{
     padding:20px;
     color:Black;
     background-color:White;
