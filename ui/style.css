@@ -78,3 +78,12 @@ h3 { color:white; font-size:40px; font-family:courier; padding-bottom: 10px; tex
     margin-bottom:20px;
     border-radius:20%;
 }
+
+.divComments{
+    padding:20px;
+    color:Yellow;
+    background-color:White;
+    margin-top:20px;
+    margin-bottom:20px;
+    border-radius:20%;
+}
