@@ -66,7 +66,8 @@ var comments=[];
 app.get('/comments/:comment',function(req,res){
     var comment=req.params.comment;
     console.log(comment);
-    comments.push(comment);
+    var ip=req.connection.remoteAddress
+    comments.push(comment+'from ip:'+ip.toString());
     res.send(JSON.stringify(comments));
 });
 
