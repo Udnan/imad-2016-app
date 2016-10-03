@@ -67,7 +67,7 @@ app.get('/comments/:comment',function(req,res){
     var comment=req.params.comment;
     console.log(comment);
     var ip=req.connection.remoteAddress
-    comments.push(comment+'from ip:'+ip.toString());
+    comments.push(comment+'  -from ip:'+ip.toString());
     res.send(JSON.stringify(comments));
 });
 
