@@ -8,18 +8,82 @@ html {
 }
 
 body {
+  background-image: url("/ui/wall.jpg");
   overflow: hidden;
   height: inherit;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 7rem;
   letter-spacing: -1px;
   position: absolute;
-  margin: 0;
-  top: -4px;
-  right: 5px;
-
+  margin: 0px;
+  left: 311px; 
+  top: 101px;
   color: transparent;
-  text-shadow: 0 0 4px white;
+  text-shadow: 0 0 1px white;
+}
+
+
+h2{
+  font-size: 2rem;
+  letter-spacing: -1px;
+  position: relative;
+  margin:0px;
+  top: -40px;
+  right: 5px;
+  color: transparent;
+  text-shadow: 0 0 1px white;
+}
+
+h3 {
+  font-size: 2rem;
+  letter-spacing: -1px;
+  position: relative;
+  top: -34px;
+  right: 5px;
+  margin: 0px;
+  color: transparent;
+  text-shadow: 0 0 1px white;
+}
+
+
+.form{
+  font-size: 2rem;
+  letter-spacing: -1px;
+  position: relative;
+  top: -20px;
+  color: Black;
+  text-shadow: 0 0 1px white;
+
+}
+
+#submit_button{
+  font-size: 2rem;
+  letter-spacing: -1px;
+  position: relative;
+  top: -20px;
+  color: black;
+  text-shadow: 0 0 1px white;
+}
+
+#Description{
+  font-family: courier;
+  font-size: 20px;
+  margin:0px;
+  margin-top:0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color:white;
+  text-align: center;
+  padding-top:0px;
+
+}
+
+a{
+  color:LightBlue;
+}
+a:hover {
+ text-decoration: none;
+ color: #a3211f;
 }
