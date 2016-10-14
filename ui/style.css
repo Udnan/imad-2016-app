@@ -60,7 +60,7 @@ h3 { color:white; font-size:40px; font-family:courier; padding-bottom: 10px; tex
 }
 
 #comment_box{
-    margin-left:200px;
+    margin-left:250px;
     opacity:0.76;
     border: 4px solid rgba(0,0,0,0.1);
 	padding: 8px 10px;
@@ -84,7 +84,18 @@ h3 { color:white; font-size:40px; font-family:courier; padding-bottom: 10px; tex
     width:500px;
     margin-top:20px;
     margin-bottom:20px;
+    margin-left:220px;
     border-radius:15px 50px;
     border-top-left-radius:0px;
     border-bottom-right-radius:0px;
 }
+
+#comment_button {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 550px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
