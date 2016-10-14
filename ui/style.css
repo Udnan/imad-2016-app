@@ -100,6 +100,10 @@ h2 { color:white; font-size:40px; font-family:courier; padding-bottom: 10px; tex
     padding-bottom: 10px;
 }
 
+h2 ArticleHead{
+    text-shadow:4px 2px IndianRed
+    
+}
 
 
 
