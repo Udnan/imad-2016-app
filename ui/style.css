@@ -90,7 +90,7 @@ h3 { color:white; font-size:40px; font-family:courier; padding-bottom: 10px; tex
     border-bottom-right-radius:0px;
 }
 
-#comment_button {
+#btnSubmit{
     padding-left: 10px;
     padding-right: 10px;
     margin-left: 550px;
