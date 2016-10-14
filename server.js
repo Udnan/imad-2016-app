@@ -66,17 +66,12 @@ var comments=[];
 app.get('/comments/:comment',function(req,res){
     var comment=req.params.comment;
     console.log(comment);
-    var ip=req.connection.remoteAddress
+    var ip = req.header('x-forwarded-for') || req.connection.remoteAddress;
     comments.push(comment+'  -from ip:'+ip.toString());
     res.send(JSON.stringify(comments));
 });
 
-//var counter=0;
-//app.get('/comments',function(req,res){
-//    console.log("Accessed comments");
- //   counter=counter+1;
- //   res.send(counter.toString());
-//});
+
 
 
 
