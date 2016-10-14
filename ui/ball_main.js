@@ -1,8 +1,15 @@
 var canvas = document.querySelector('canvas');
+var ballNo=document.getElementById('ballNo');//span
+var submit_button=document.getElementById('submit_button');
+var input_no=document.getElementById('input_no');
+
 var ctx = canvas.getContext('2d');
 canvas.addEventListener("click",getClickPosition,false);
-var width = canvas.width = window.innerWidth;
-var height = canvas.height = window.innerHeight;
+var width = canvas.width = window.innerWidth; 
+var height = canvas.height = window.innerHeight/2; // divided bt 2
+var no_of_balls=35;
+//update noumber of balls
+
 
 // function to generate random number
 
@@ -58,6 +65,7 @@ Ball.prototype.collisionDetect=function(){
 	for(j=0;j<balls.length;j++){
 		if(!(this.x===balls[j].x && this.y===balls[j].y && this.velX===balls[j].velX && this.velY===balls[j].velY)){
 			var dx=this.x-balls[j].x;
+			
 			var dy=this.y-balls[j].y;
 			
 			var distance= Math.sqrt(dx*dx+dy*dy);
@@ -78,7 +86,7 @@ function loop(){
 	ctx.fillStyle='rgba(0,0,0,1)';
 	ctx.fillRect(0,0,width,height);
 
-	while(balls.length<35){
+	while(balls.length<no_of_balls){
 		var ball= new Ball();
 		balls.push(ball);
 
@@ -92,11 +100,11 @@ function loop(){
 
 	requestAnimationFrame(loop);
 }
-loop();
+//loop();
 //ctx on click event
 function getClickPosition(e) {
 	console.log('clicked');
-    var xPosition = e.clientX;
+    var xPosition = e.clientX - canvas.style.left; //aded something 
     var yPosition = e.clientY;
     console.log('X:'+xPosition);
     for(j=0;j<balls.length;j++){
@@ -106,6 +114,20 @@ function getClickPosition(e) {
 	    balls[j].velY=random(-7,7);
 
     }
+    
 }
+loop();
+
+submit_button.onclick=function(){
+	console.log('submitted');
+	no_of_balls=input_no.value;
+	ballNo.innerHTML=no_of_balls;
+	balls=[];
+	console.log('empty');
+	console.log(balls.length);
+	//loop();
+
+}
+
 
 
