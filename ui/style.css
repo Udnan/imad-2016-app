@@ -89,6 +89,7 @@ h2 { color:white; font-size:40px; font-family:courier; padding-bottom: 10px; tex
     border-radius:15px 50px;
     border-top-left-radius:0px;
     border-bottom-right-radius:0px;
+    font-family:courier
 }
 
 #btnSubmit{
