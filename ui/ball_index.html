@@ -1,16 +1,27 @@
-
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <title>Bouncing balls</title>
-    <link rel="stylesheet" href="/ui/ball_style.css">
+    <link rel="stylesheet" href="ball_style.css">
   </head>
 
   <body>
-    <h1>bouncing balls</h1>
+    <h1>Ball Explosion</h1>
     <canvas></canvas>
+    <div align="center" id="Action">
 
+      <h2 >Number of balls:<span id=ballNo>35</span></h2>
+      <h3 >Specify no of balls</h3>
+      <input class="form" id="input_no" type="number" name="quantity" min="1" max="100">
+      <button  id="submit_button" >Submit</button>
+    </div>
+    <div id="Description">
+      <h4>Click anywhere in the above black canvas and they EXPLODE !
+          The above design can be implemented using Javascript and a little bit of HTML and CSS.I learned this from the <a href="https://developer.mozilla.org">mozilla developers website</a> and tweaked it in my own way ;) (it's my first JS app).
+          Please leave your Comments below.
+      </h4>
+    </div>
     <script src="/ui/ball_main.js"></script>
   </body>
 </html>
