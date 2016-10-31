@@ -92,8 +92,8 @@ app.get('/test-db',function(req,res){
             res.send(JSON.stringify(result));
         }
         
-    })
-})
+    });
+});
 
 
 
