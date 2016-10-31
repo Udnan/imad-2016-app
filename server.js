@@ -1,6 +1,15 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
+var Pool = require('pg').Pool;
+
+var config ={
+    user:'udnan',
+    database:'udnan',
+    password:process.env.DB_PASSWORD,
+    port:'5432'
+    
+};
 
 var app = express();
 app.use(morgan('combined'));
@@ -73,7 +82,18 @@ app.get('/comments/:comment',function(req,res){
     res.send(JSON.stringify(comments));
 });
 
-
+var pool=new Pool(config);
+app.get('/test-db',function(req,res){
+    //goto db
+    pool.query('SELECT * FROM test',function(err,result){
+        if (err){
+            res.status(500).send(err.toString(err));
+        }else{
+            res.send(JSON.stringify(result));
+        }
+        
+    })
+})
 
 
 
