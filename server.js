@@ -6,7 +6,7 @@ var Pool = require('pg').Pool;
 var config ={
     user:'udnan',
     database:'udnan',
-    password:process.env.DB_PASSWORD,
+    password:'db-udnan-7012',
     port:'5432'
     
 };
