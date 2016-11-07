@@ -9,6 +9,7 @@ var config ={
     user:'udnan',
     database:'udnan',
     password:'db-udnan-7012',
+    host:'db.imad.hasura-app.io',
     port:'5432'
     
 };
