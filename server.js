@@ -28,7 +28,26 @@ function hash(input,salt){
 app.get('/hash/:input',function(req,res){
     var hashedString = hash(req.params.input,'salt');
     res.send(hashedString);
-})
+});
+
+app.post('/create-user',function(req,res){
+    username=req.body.username;
+    password=req.body.password;
+    
+    //user name and password
+    salt=crypto.randomBytes(128).toString('hex');
+    dbString=hash(password,salt);
+    pool.query('INSERT INTO "user" (username,password) VALUES($1,$2)',[username,dbString],function(err,result){
+        if (err){
+            res.status(500).send(err.toString(err));
+        }else{
+            res.send("User succesfully created :"+username);
+        }
+        
+        
+    });
+    
+});
 
 
 //data
