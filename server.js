@@ -28,17 +28,18 @@ function hash(input,salt){
     return ['pbkdf2S','10000',salt,hashed.toString('hex')].join('$');
 }
 
-app.get('/hash/:input',function(req,res){
+/*app.get('/hash/:input',function(req,res){
     var hashedString = hash(req.params.input,'salt');
     res.send(hashedString);
-});
+});*/
+
 
 app.post('/create-user',function(req,res){
-    username=req.body.username;
-    password=req.body.password;
+    var username=req.body.username;
+    var password=req.body.password;
     
     //user name and password
-    salt=crypto.randomBytes(128).toString('hex');
+    var salt=crypto.randomBytes(128).toString('hex');
     dbString=hash(password,salt);
     pool.query('INSERT INTO "user" (username,password) VALUES($1,$2)',[username,dbString],function(err,result){
         if (err){
@@ -53,10 +54,10 @@ app.post('/create-user',function(req,res){
 });
 
 app.post('/login',function(req,res){
-    username=req.body.username;
-    password=req.body.password;
+    var username=req.body.username;
+    var password=req.body.password;
     
-    dbString=hash(password,salt);
+    var dbString=hash(password,salt);
     pool.query('SELECT * FROM "user" WHERE username=$1',[username],function(err,result){
         if (err){
             res.status(500).send(err.toString(err));
