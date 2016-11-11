@@ -76,7 +76,6 @@ app.post('/login',function(req,res){
                     
                 }
                 
-                res.send("User succesfully created :"+username);
             }
         
             
