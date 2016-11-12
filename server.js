@@ -143,7 +143,7 @@ app.get('/login',function(req,res){
     res.sendFile(path.join(__dirname,'ui','login.html'));
 });
 
-app.get('ui/login.js',function(req,res){
+app.get('/ui/login.js',function(req,res){
     res.sendFile(path.join(__dirname,'ui','login.js'));
 });
 
