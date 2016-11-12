@@ -139,7 +139,7 @@ app.get('/ui/ball_main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'ball_main.js'));
 });
 
-app.get('ui/login.html',function(req,res){
+app.get('/login',function(req,res){
     res.sendFile(path.join(_dirname,'ui','login.html'));
 });
 
