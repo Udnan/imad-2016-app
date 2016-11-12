@@ -140,7 +140,7 @@ app.get('/ui/ball_main.js', function (req, res) {
 });
 
 app.get('/login',function(req,res){
-    res.sendFile(path.join(_dirname,'ui','login.html'));
+    res.sendFile(path.join(__dirname,'ui','login.html'));
 });
 
 app.get('ui/login.js',function(req,res){
