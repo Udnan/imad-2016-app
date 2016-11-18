@@ -161,7 +161,7 @@ app.get('/comment',function(req,res){
                 res.status(403).send("NO comments till now :(");
                 
             }else{
-                res.send(result.rows[0]);
+                res.send(result.rows);
                 //var dbString=result.rows[0].password;
                 //var salt =dbString.split('$')[2];
 
