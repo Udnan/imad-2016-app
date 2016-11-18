@@ -151,7 +151,7 @@ app.get('/ui/login.js',function(req,res){
 
 
 //new comment system
-app.post('/comment',function(req,res){
+app.get('/comment',function(req,res){
     
     pool.query('SELECT * FROM "comment"',function(err,result){
         if (err){
