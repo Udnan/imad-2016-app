@@ -162,14 +162,7 @@ app.get('/comment',function(req,res){
                 
             }else{
                 res.send(result.rows);
-                //var dbString=result.rows[0].password;
-                //var salt =dbString.split('$')[2];
-
-                //var hashedPassword=hash(password,salt);
-                //if (hashedPassword===dbString){
-                    res.send("CREDENTIALS are correct ");
-                //}else{
-                   // res.status(403).send("USERNAME/PASSWORD is INVALID!");
+            
                 }
                 
             }
