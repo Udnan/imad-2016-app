@@ -78,16 +78,16 @@ btnSubmit.onclick=function(){
         if(request.readyState === XMLHttpRequest.DONE){
         
             if (request.status===200){
-                var comments=request.responseText.comment;
-                var list='';
+                var comments=request.responseText;
+               /* var list='';
                 for(var i=0;i<comments.length;i++){
                     
                     list='<div class="divComment">'+comments[i]+'</div>'+list;
                     console.log(i);
                     
                 }
-                var divComments=document.getElementById("divComments");
-                divComments.innerHTML=list;
+                var divComments=document.getElementById("divComments");*/
+                divComments.innerHTML=comments;
                 
             }
         }
