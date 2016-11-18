@@ -150,6 +150,38 @@ app.get('/ui/login.js',function(req,res){
 
 
 
+//new comment system
+app.post('/comment',function(req,res){
+    
+    pool.query('SELECT * FROM "comment"',function(err,result){
+        if (err){
+            res.status(500).send("Something went wrong ");
+        }else{
+            if (result.rows.length===0){
+                res.status(403).send("NO comments till now :(");
+                
+            }else{
+                res.send(result.rows[0]);
+                //var dbString=result.rows[0].password;
+                //var salt =dbString.split('$')[2];
+
+                //var hashedPassword=hash(password,salt);
+                //if (hashedPassword===dbString){
+                    res.send("CREDENTIALS are correct ");
+                //}else{
+                   // res.status(403).send("USERNAME/PASSWORD is INVALID!");
+                }
+                
+            }
+        
+            
+        });
+});
+        
+        
+
+
+
 
 var comments=[];
 app.get('/comments/:comment',function(req,res){
