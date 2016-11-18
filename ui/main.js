@@ -69,7 +69,7 @@ var myVar = setInterval(function(){Type(no);}, 200,no);
 
 // new comment system
 
-btnSubmit.onload=function(){
+btnSubmit.onclick=function(){
     //get the comments
     console.log("loaded submit button");
    
