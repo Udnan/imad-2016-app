@@ -1,7 +1,7 @@
 console.log('Loaded!');
 var counter;
 var btnSubmit=document.getElementById("btnSubmit");
-btnSubmit.onclick=function(){
+/*btnSubmit.onclick=function(){
     //get the comments
     console.log("clicked submit button");
    
@@ -28,7 +28,7 @@ btnSubmit.onclick=function(){
     
     request.open('GET',"http://udnan.imad.hasura-app.io/comments/"+comment_box.value,true);
     request.send(null);
-};
+};*/
 
 
 // Next article comming soon 
