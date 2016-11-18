@@ -88,7 +88,7 @@ btnSubmit.onclick=function(){
                     
                 }
                 var divComments=document.getElementById("divComments");
-                divComments.innerHTML=comments;
+                divComments.innerHTML=list;
                 
             }
         }
