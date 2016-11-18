@@ -79,6 +79,7 @@ btnSubmit.onclick=function(){
         
             if (request.status===200){
                 var comments=request.responseText;
+                comments=JSON.parse(comments);
                 console.log(comments);
                 var list='';
                 for(var i=0;i<comments.length;i++){
