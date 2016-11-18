@@ -67,4 +67,34 @@ function Type() {
 var myVar = setInterval(function(){Type(no);}, 200,no);
 
 
+// new comment system
+
+btnSubmit.onload=function(){
+    //get the comments
+    console.log("loaded submit button");
+   
+    var request= new XMLHttpRequest();
+    request.onreadystatechange=function(){
+        if(request.readyState === XMLHttpRequest.DONE){
+        
+            if (request.status===200){
+                var comments=request.responseText.comment;
+                var list='';
+                for(var i=0;i<comments.length;i++){
+                    
+                    list='<div class="divComment">'+comments[i]+'</div>'+list;
+                    console.log(i);
+                    
+                }
+                var divComments=document.getElementById("divComments");
+                divComments.innerHTML=list;
+                
+            }
+        }
+    };
+    //make request 
+    
+    request.open('GET',"http://udnan.imad.hasura-app.io/comment",true);
+    request.send(null);
+};
 
