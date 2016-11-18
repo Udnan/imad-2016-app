@@ -79,14 +79,15 @@ btnSubmit.onclick=function(){
         
             if (request.status===200){
                 var comments=request.responseText;
-               /* var list='';
+                console.log(comments);
+                var list='';
                 for(var i=0;i<comments.length;i++){
                     
-                    list='<div class="divComment">'+comments[i]+'</div>'+list;
+                    list='<div class="divComment">'+comments[i].comment+'-'+comments[i].username+'</div>'+list;
                     console.log(i);
                     
                 }
-                var divComments=document.getElementById("divComments");*/
+                var divComments=document.getElementById("divComments");
                 divComments.innerHTML=comments;
                 
             }
