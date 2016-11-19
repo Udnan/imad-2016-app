@@ -185,16 +185,23 @@ app.get('/comment',function(req,res){
         });
 });
 
-var comments=[];
-app.get('/comments/:comment',function(req,res){
-    var comment=req.params.comment;
-    console.log(comment);
-    var ip = req.header('x-forwarded-for') || req.connection.remoteAddress;
-    if (comment !==''){
-        comments.push(comment+'  -from ip:'+ip.toString());
-    }
-    res.send(JSON.stringify(comments));
+app.post('/comment',function(req,res){
+    var username=req.session.userId;
+    var comment=req.body.comment;
+    //inserting comment
+    pool.query('INSERT INTO "comment" (username,comment) VALUES($1,$2)',[username,comment],function(err,result){
+        if (err){
+            res.status(500).send(err.toString(err));
+        }else{
+            res.send(username+" succesfully Inserted comment :"+comment);
+        }
+    });
+    
 });
+
+/*var comments=[];
+app.get('/comments/:comment',function(req,res){var comment=req.params.comment;console.log(comment);var ip = req.header('x-forwarded-for') || req.connection.remoteAddress;
+    if (comment !==''){comments.push(comment+'  -from ip:'+ip.toString());}res.send(JSON.stringify(comments));});*/
 
 var pool=new Pool(config);
 
