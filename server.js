@@ -152,7 +152,7 @@ app.get('/ui/login.js',function(req,res){
 });
 
 app.get('/ui/signup.js',function(req,res){
-    res.sendFile(path.join(__dirname,'ui','login.js'));
+    res.sendFile(path.join(__dirname,'ui','signup.js'));
 });
 
 
