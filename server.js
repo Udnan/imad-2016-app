@@ -12,7 +12,6 @@ var config ={
     password:'db-udnan-7012',
     host:'db.imad.hasura-app.io',
     port:'5432'
-    
 };
 
 var app = express();
