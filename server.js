@@ -169,19 +169,12 @@ app.get('/comment',function(req,res){
                 
             }else{
                 res.send(result.rows);
-            
                 }
-                
             }
         
-            
         });
 });
         
-        
-
-
-
 
 var comments=[];
 app.get('/comments/:comment',function(req,res){
