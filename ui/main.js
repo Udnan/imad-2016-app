@@ -123,7 +123,7 @@ btnSubmit.onclick=function(){
 		}
 	};
 
-	var comment=document.getElementById('password').value;
+	var comment=document.getElementById('comment_box').value;
 	console.log(comment);
 	request.open('POST','http://udnan.imad.hasura-app.io/comment',true);
 	request.setRequestHeader('Content-Type','application/json');
