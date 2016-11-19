@@ -6,7 +6,7 @@ submit.onclick=function(){
 	request.onreadystatechange = function(){
 		if (request.readyState=== XMLHttpRequest.DONE){
 				if (request.status===200){
-					//succesfully logged in
+					//succesfully signed in
 					console.log('user succesfully logged in');
 					alert('Logged in succesfully');
 
@@ -23,7 +23,7 @@ submit.onclick=function(){
 	var password=document.getElementById('password').value;
 	console.log(username);
 	console.log(password);
-	request.open('POST','http://udnan.imad.hasura-app.io/login',true);
+	request.open('POST','http://udnan.imad.hasura-app.io/create-user',true);
 	request.setRequestHeader('Content-Type','application/json');
 	request.send(JSON.stringify({'username':username,'password':password}));
 
