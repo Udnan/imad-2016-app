@@ -14,6 +14,7 @@ submit.onclick=function(){
 					alert('Username/password is wrong!');
 				}else if (request.status===500){
 					alert('Something went wrong ');
+					alert(request.responseText);
 				}
 
 		}
