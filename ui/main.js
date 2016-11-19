@@ -47,10 +47,10 @@ function Type() {
 		}else{
 			var s= span.innerHTML;
 			span.innerHTML=s.slice(0,s.length-1);
-			count=count-1
+			count=count-1;
 			if (count ===0){
 				flag=0;
-				no=no+1
+				no=no+1;
 				if (no===3){
 					no=0;
 				}
@@ -67,7 +67,7 @@ function Type() {
 var myVar = setInterval(function(){Type(no);}, 200,no);
 
 
-// new comment system
+// new comment display system
 //changed btnSubmit.onClick to window.onload
 window.onload=function(){
     //get the comments
@@ -100,3 +100,32 @@ window.onload=function(){
     request.send(null);
 };
 
+
+
+//new comment add system
+btnSubmit.onclick=function(){
+
+	var request= new XMLHttpRequest();
+
+	request.onreadystatechange = function(){
+		if (request.readyState=== XMLHttpRequest.DONE){
+				if (request.status===200){
+					//succesfully commented
+					console.log('user succesfully commented');
+					alert('Commented  succesfully');
+
+				}else if (request.status===403){
+					alert('Forbidden');
+				}else if (request.status===500){
+					alert('Something went wrong ');
+					alert(request.responseText);
+				}
+		}
+	};
+
+	var comment=document.getElementById('password').value;
+	console.log(comment);
+	request.open('POST','http://udnan.imad.hasura-app.io/comment',true);
+	request.setRequestHeader('Content-Type','application/json');
+	request.send(JSON.stringify({'comment':comment}));
+};
