@@ -28,10 +28,7 @@ function hash(input,salt){
     return ['pbkdf2S','10000',salt,hashed.toString('hex')].join('$');
 }
 
-/*app.get('/hash/:input',function(req,res){
-    var hashedString = hash(req.params.input,'salt');
-    res.send(hashedString);
-});*/
+
 
 
 app.post('/create-user',function(req,res){
@@ -174,7 +171,6 @@ app.get('/comment',function(req,res){
         
         });
 });
-        
 
 var comments=[];
 app.get('/comments/:comment',function(req,res){
@@ -188,7 +184,8 @@ app.get('/comments/:comment',function(req,res){
 });
 
 var pool=new Pool(config);
-app.get('/test-db',function(req,res){
+
+/*app.get('/test-db',function(req,res){
     //goto db
     pool.query('SELECT * FROM test',function(err,result){
         if (err){
@@ -198,7 +195,7 @@ app.get('/test-db',function(req,res){
         }
         
     });
-});
+});*/
 
 
 
