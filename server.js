@@ -187,14 +187,7 @@ var pool=new Pool(config);
 
 /*app.get('/test-db',function(req,res){
     //goto db
-    pool.query('SELECT * FROM test',function(err,result){
-        if (err){
-            res.status(500).send(err.toString(err));
-        }else{
-            res.send(JSON.stringify(result));
-        }
-        
-    });
+    pool.query('SELECT * FROM test',function(err,result){if (err){res.status(500).send(err.toString(err));}else{res.send(JSON.strin(result));}});
 });*/
 
 
