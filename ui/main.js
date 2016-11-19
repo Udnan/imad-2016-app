@@ -68,8 +68,8 @@ var myVar = setInterval(function(){Type(no);}, 200,no);
 
 
 // new comment system
-
-btnSubmit.onclick=function(){
+//changed btnSubmit.onClick to window.onload
+window.onload=function(){
     //get the comments
     console.log("loaded submit button");
    
