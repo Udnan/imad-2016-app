@@ -185,7 +185,7 @@ app.get('/comment',function(req,res){
 });
 
 app.post('/comment',function(req,res){
-    var username=req.session.userName;
+    var username=req.session.auth.userName;
     var comment=req.body.comment;
     //inserting comment
     pool.query('INSERT INTO "comment" (username,comment) VALUES($1,$2)',[username,comment],function(err,result){
