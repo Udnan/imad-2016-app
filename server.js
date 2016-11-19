@@ -20,7 +20,6 @@ app.use(bodyParser.json());
 app.use(session({
     secret:'someRandomSecretValue',
     cookie:{ maxAge:1000*60*60*24*30}
-    
 }));
 
 app.get('/', function (req, res) {
@@ -166,6 +165,7 @@ app.get('/ui/signup.js',function(req,res){
 
 app.get('/logout',function(req,res){
     delete req.session.auth;
+    res.send('Logged-out!');
 });
 
 
