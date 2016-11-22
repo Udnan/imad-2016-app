@@ -84,7 +84,7 @@ window.onload=function(){
                 var list='';
                 for(var i=0;i<comments.length;i++){
                     
-                    list='<div class="divComment">'+comments[i].comment+'-'+comments[i].username+'</div>'+list;
+                    list='<div class="divComment"><p>'+'<b>'+comments[i].username+'</b>'+'</p><p>'+comments[i].comment+'</p></div>'+list;
                     console.log(i);
                     
                 }
