@@ -1,3 +1,4 @@
+Loggedin();
 console.log('Loaded!');
 var counter;
 var btnSubmit=document.getElementById("btnSubmit");
