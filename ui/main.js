@@ -140,11 +140,10 @@ window.onclick=function(){
 	request.onreadystatechange = function(){
 		if (request.readyState=== XMLHttpRequest.DONE){
 				if (request.status===200){
-					console.log('Found soemething');
+					console.log('Found something');
 					var result=request.responseText;
 					if (result!='You are not logged in! '){
-					console.log(result);
-					console.log(result=='You are not logged in! ');
+					console.log(result.slice(16));
 					}else{
 					    console.log("Not logged in!");
 					}
