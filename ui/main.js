@@ -144,6 +144,9 @@ window.onclick=function(){
 					if (request.responseText!='You are not logged in!'){
 					var result=request.responseText.slice(16);
 					console.log(result);
+					console.log(request.responseText=='You are not logged in!');
+					}else{
+					    console.log("Not logged in!");
 					}
 
 				}else if (request.status===403){
