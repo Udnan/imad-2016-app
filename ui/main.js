@@ -1,3 +1,4 @@
+location.reload(forceGet);
 console.log('Loaded!');
 var counter;
 var btnSubmit=document.getElementById("btnSubmit");
@@ -99,6 +100,7 @@ window.onload=function(){
     request.open('GET',"http://udnan.imad.hasura-app.io/comment",true);
     request.send(null);
     Loggedin();
+    
 };
 
 
@@ -146,6 +148,7 @@ function Loggedin(){
 					if (result!='You are not logged in! '){
 					console.log(result.slice(17));
 					alert("Welcome "+result.slice(17));
+					
 					}else{
 					    console.log("Not logged in!");
 					}
