@@ -141,7 +141,7 @@ window.onclick=function(){
 		if (request.readyState=== XMLHttpRequest.DONE){
 				if (request.status===200){
 					console.log('Found soemething');
-					if (request.responseText!="You are not logged in!"){
+					if (request.responseText!='You are not logged in!'){
 					var result=request.responseText.slice(16);
 					console.log(result);
 					}
