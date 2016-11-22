@@ -99,7 +99,7 @@ window.onload=function(){
     
     request.open('GET',"http://udnan.imad.hasura-app.io/comment",true);
     request.send(null);
-    Loggedin();
+    
     
 };
 
