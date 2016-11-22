@@ -129,3 +129,34 @@ btnSubmit.onclick=function(){
 	request.setRequestHeader('Content-Type','application/json');
 	request.send(JSON.stringify({'comment':comment}));
 };
+
+
+
+//logged in then
+window.onclick=function(){
+
+	var request= new XMLHttpRequest();
+
+	request.onreadystatechange = function(){
+		if (request.readyState=== XMLHttpRequest.DONE){
+				if (request.status===200){
+					console.log('Found soemething');
+					if (request.responseText!="You are not logged in!"){
+					var result=request.responseText.slice(16);
+					console.log(result);
+					}
+
+				}else if (request.status===403){
+					console('Forbidden user request');
+				}else if (request.status===500){
+					console.log('Something went wrong regarding user ');
+					console.log(request.responseText);
+				}
+		}
+	};
+
+	//var comment=document.getElementById('password').value;
+	//console.log(comment);
+	request.open('GET','http://udnan.imad.hasura-app.io/check-login',true);
+	request.send(null);
+};
