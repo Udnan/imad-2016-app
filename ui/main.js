@@ -142,7 +142,7 @@ window.onclick=function(){
 				if (request.status===200){
 					console.log('Found soemething');
 					if (request.responseText!='You are not logged in!'){
-					var result=request.responseText.slice(16);
+					var result=request.responseText;
 					console.log(result);
 					console.log(request.responseText=='You are not logged in!');
 					}else{
