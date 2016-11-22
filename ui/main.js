@@ -98,6 +98,7 @@ window.onload=function(){
     
     request.open('GET',"http://udnan.imad.hasura-app.io/comment",true);
     request.send(null);
+    Loggedin();
 };
 
 
@@ -133,7 +134,7 @@ btnSubmit.onclick=function(){
 
 
 //logged in then
-btnSubmit.onload=function(){
+function Loggedin(){
 
 	var request= new XMLHttpRequest();
 
@@ -162,4 +163,4 @@ btnSubmit.onload=function(){
 	//console.log(comment);
 	request.open('GET','http://udnan.imad.hasura-app.io/check-login',true);
 	request.send(null);
-};
+}
