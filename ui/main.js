@@ -133,7 +133,7 @@ btnSubmit.onclick=function(){
 
 
 //logged in then
-window.onclick=function(){
+btnSubmit.onload=function(){
 
 	var request= new XMLHttpRequest();
 
@@ -143,7 +143,8 @@ window.onclick=function(){
 					console.log('Found something');
 					var result=request.responseText;
 					if (result!='You are not logged in! '){
-					console.log(result.slice(16));
+					console.log(result.slice(17));
+					alert("Welcome "+result.slice(17));
 					}else{
 					    console.log("Not logged in!");
 					}
